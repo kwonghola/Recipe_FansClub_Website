@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Page</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Upload Recipe</h1>
+	</header>
+	<nav>
+        <ul>
+            <li><a href="welcome.php">Home</a></li>
+            <li><a href="upload_recipe.html">Upload Recipe</a></li>
+            <li><a href="view_recipe.php">View Recipes</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+	<main>
+		<form action="upload_recipe.php" method="post">
+            <label for="recipe_name">Recipe Name:</label>
+            <input type="text" name="recipe_name" required>
+            
+            <label for="cuisine_type">Cuisine Type:</label>
+            <select name="cuisine_type" required>
+                <!-- Value should be ID of the cuisine type, but for simplicity, I'm using the names -->
+                <option value="japanese">Japanese </option>
+                <option value="chinese">Chinese</option>
+                <option value="indian">Indian</option>
+                <option value="korean">Korean</option>
+                <option value="taiwan">Taiwan</option>
+            </select>
+            
+            <label for="recipe_diff">Difficulty level:</label>
+            <select name="recipe_diff" required>
+                <option value="Low">Low</option>
+                <option value="Middle">Middle</option>
+                <option value="Hard">Hard</option>
+                <option value="Chef">Chef</option>
+            </select>
+            
+            <label for="recipe_time">Cooking Time</label>
+            <select name="recipe_time" required>
+                <option value="20">Less than 20 mins</option>
+                <option value="30">20-30 mins</option>
+                <option value="40">30-40</option>
+                <option value="50">50-60</option>
+                <option value="60">More than 1 hour</option>
+            </select>
+            
+            <label for="recipe_ingredients">Ingredients:</label>
+            <input type="text" name="ingredient_1" placeholder="Ingredient 1" required>
+            <input type="text" name="ingredient_2" placeholder="Ingredient 2">
+            <input type="text" name="ingredient_3" placeholder="Ingredient 3">
+            
+            <label for="recipe_description">Description :</label>
+            <textarea name="recipe_description" required></textarea>
+            
+            <button type="submit">Upload Recipe</button>
+        </form>
+	</main>
+</body>
+</html>
